@@ -1,0 +1,22 @@
+{
+  "name": "beginning-angular-libertyjs",
+  "version": "1.0.0",
+  "authors": [
+    "Ken Rimple <krimple@chariotsolutions.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-resource": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "angular-material": "~0.10.0"
+  }
+}
