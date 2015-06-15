@@ -27,7 +27,7 @@ npm install -g jshint karma-cli bower gulp http-server
 
 ### Download and install this project
 
-Grab an archive from the release page of this project and unzip it in a directory.
+Grab an archive [from here](https://github.com/krimple/getting-started-angularjs-libertyjs/releases/tag/1.0.0) and unzip it in a directory.
 
 Issue the following command from the root of the project directory to finish setting it up:
 
