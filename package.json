@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "body-parser": "^1.13.1",
     "express": "^4.12.4",
     "http-server": "^0.8.0",
     "jasmine-core": "^2.3.4",
