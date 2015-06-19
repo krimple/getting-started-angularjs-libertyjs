@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('editorApp', ['ngMaterial', 'ngRoute'])
+  angular.module('editorApp', ['ui.bootstrap', 'ngRoute', 'ngAnimate', 'ngAria'])
   .config(['$routeProvider', configFn]);
 
   function configFn($routeProvider) {

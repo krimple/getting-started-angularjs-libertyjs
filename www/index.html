@@ -2,34 +2,46 @@
 <html ng-app="editorApp">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Hello, Angular World!</title>
-		<link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css">
 		<script src="bower_components/angular/angular.js"></script>
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	</head>
-	<body layout="column">
-		<md-toolbar layout="row">
-			<h1>Angular Editor</h1>
-		</md-toolbar>
-		<section layout="row">
-			<section ng-controller="NavController" flex="33">
-				<h2>File List</h2>
-				<div ng-repeat="file in files">
-				<a ng-href="#/file/{{ file.fileName }}">{{ file.fileName }}</a>
+	<body>
+		
+		<div class="container-fluid">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Angular Editor</a>
 				</div>
+			</nav>
+			<section ng-controller="NavController" class="col-md-3">
+				<h3>File List</h3>
+				<hr/>
+				<ul class="list-unstyled">
+					<li ng-repeat="file in files">
+						<span class="col-md-8 text-right">{{ file.fileName }}</span>
+						<span>
+							<a class="btn btn-primary btn-sm btn-default"
+							ng-href="#/file/{{ file.fileName }}">edit</a>
+						</span>
+						<br/><br/>
+					</li>
+				</ul>
 			</section>
-			<section flex="67">
+			<section class="col-md-8">
 				<div ng-view></div>
 			</section>
-		</section>
+		</div>
 		<script src="js/find-polyfill.js"></script>
+		<script src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js"></script>
 		<script src="bower_components/angular-route/angular-route.js"></script>
-		<script src="bower_components/angular-material/angular-material.js"></script>
 		<script src="bower_components/angular-animate/angular-animate.js"></script>
 		<script src="bower_components/angular-aria/angular-aria.js"></script>
 		<script src="js/editor/editor-app.js"></script>
 		<script src="js/editor/nav-controller.js"></script>
 		<script src="js/editor/editor-controller.js"></script>
 		<script src="js/editor/file-service.js"></script>
+		<script src="js/editor/editor-directive.js"></script>
 	</body>
 </html>
