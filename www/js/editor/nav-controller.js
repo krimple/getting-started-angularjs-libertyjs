@@ -1,13 +1,14 @@
 (function(angular) {
   'use strict';
   angular.module('editorApp')
-  .controller('NavController', ['$scope', 'fileService', NavController]);
+  .controller('NavController', ['fileService', NavController]);
 
-  function NavController($scope, fileService) {
-  	$scope.files = fileService.files;
+  function NavController(fileService) {
+  	var vm = this;
+  	vm.files = fileService.files;
 
-  	$scope.addFile = function(newName) {
-  		$scope.files.push({ fileName: newName, fileData: 'edit me!'});
+  	vm.addFile = function(newName) {
+  		vm.files.push({ fileName: newName, fileData: 'edit me!'});
   	};
   }
 }(window.angular));

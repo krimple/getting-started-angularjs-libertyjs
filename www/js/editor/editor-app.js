@@ -10,7 +10,8 @@
   	})
   	.when('/file/:fileName', {
   		templateUrl: 'templates/editor/editor.html.tpl',
-  		controller: 'EditorController'
+  		controller: 'EditorController',
+      controllerAs: 'vm'
   	})
   	.otherwise({
   		redirectTo: '/'
