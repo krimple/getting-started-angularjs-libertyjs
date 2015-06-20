@@ -2,13 +2,13 @@
   'use strict';
   
   angular.module('editorApp')
-  .directive('editor', editor);
+  .directive('preview', preview);
 
-  function editor($sce) {
+  function preview($sce) {
   	return {
   		restrict: 'E',
   		require: 'ngModel',
-  		template: '<div ng-bind-html="value"></div>',
+  		template: '<div style="border: 1px solid black; height: 500px !important;" ng-bind-html="value"></div>',
   		link: function(scope, element, attr, ngModelCtrl) {
   			ngModelCtrl.$render = function() {
   				scope.value = $sce.trustAsHtml(ngModelCtrl.$viewValue);
