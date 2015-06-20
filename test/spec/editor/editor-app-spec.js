@@ -1,5 +1,5 @@
 (function() {
-	'use strict';
+	"use strict";
 
 	describe('Editor application', function() {
 		beforeEach(module('editorApp'));
